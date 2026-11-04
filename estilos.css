@@ -1,0 +1,391 @@
+/* --- ESTILOS GENERALES (TheCrimsonBlood - Oscuro con acentos Rosa/Carmesí Neón) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #0b070c;
+    color: #e2d9e2;
+    line-height: 1.6;
+}
+
+/* --- BARRA DE ANUNCIOS SUPERIOR --- */
+.barra-anuncio {
+    background-color: #120a14;
+    color: #bfaabf;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 6px 0;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #2a162e;
+}
+
+/* --- ENCABEZADO Y NAVEGACIÓN --- */
+.encabezado {
+    background-color: #0b070c;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #2a162e;
+}
+
+.menu-izquierda {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu-izquierda a {
+    color: #bfaabf;
+    text-decoration: none;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.menu-izquierda a:hover,
+.menu-izquierda a.activo {
+    color: #ffffff;
+    font-weight: bold;
+    border-bottom: 2px solid #ff2a75;
+    padding-bottom: 2px;
+}
+
+.logo-marca a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.iconos-derecha {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: #bfaabf;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.contenedor-principal {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* --- BANNER PRINCIPAL (HERO) --- */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: url('https://picsum.photos/1400/800?random=100') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 60px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #2a162e;
+}
+
+.hero-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 7, 12, 0.6);
+    z-index: 1;
+}
+
+.hero-contenido {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-contenido h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.hero-contenido p {
+    font-size: 1rem;
+    color: #d1b8d3;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.btn-shop-now {
+    display: inline-block;
+    background-color: #ff2a75;
+    color: #ffffff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(255, 42, 117, 0.4);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.btn-shop-now:hover {
+    background-color: #e01b5f;
+    box-shadow: 0 0 20px rgba(255, 42, 117, 0.7);
+}
+
+/* --- SECCIÓN TITULAR --- */
+.seccion-titulo-central {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.seccion-titulo-central h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.seccion-titulo-central p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #bfaabf;
+    font-size: 0.85rem;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* --- GRID DE PRODUCTOS --- */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.tarjeta-producto {
+    background-color: #140d17;
+    border: 1px solid #2a162e;
+    overflow: hidden;
+    transition: border-color 0.3s;
+}
+
+.tarjeta-producto:hover {
+    border-color: #ff2a75;
+}
+
+.contenedor-imagen-producto {
+    position: relative;
+}
+
+.contenedor-imagen-producto img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+}
+
+.etiqueta-sale {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #ff2a75;
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: bold;
+    padding: 3px 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-producto {
+    padding: 15px;
+}
+
+.info-producto h3 {
+    font-size: 0.85rem;
+    font-weight: normal;
+    color: #d1b8d3;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.precios {
+    display: flex;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.precio-original {
+    color: #7a617c;
+    text-decoration: line-through;
+}
+
+.precio-nuevo {
+    color: #ff2a75;
+}
+
+/* --- ETIQUETAS INFERIORES DE PRODUCTOS --- */
+.etiquetas-tags-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 70px;
+    font-size: 0.75rem;
+    color: #9c849e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* --- BLOQUES DE MISIÓN Y VISIÓN --- */
+.bloque-mision-vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 60px;
+    background-color: #140d17;
+    border: 1px solid #2a162e;
+    padding: 60px;
+}
+
+.bloque-mision-vision.invertido {
+    direction: rtl;
+}
+
+.bloque-mision-vision.invertido > * {
+    direction: ltr;
+}
+
+.texto-mision h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.texto-mision p {
+    color: #bfaabf;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.btn-learn-more {
+    display: inline-block;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ff2a75;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.btn-learn-more:hover {
+    background-color: #ff2a75;
+    box-shadow: 0 0 10px rgba(255, 42, 117, 0.5);
+}
+
+.imagen-mision img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #2a162e;
+}
+
+/* --- SECCIÓN DE VIDEOS --- */
+.seccion-video-coleccion {
+    margin-top: 60px;
+    border-top: 1px solid #2a162e;
+    padding-top: 50px;
+}
+
+.seccion-video-coleccion h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #e2d9e2;
+}
+
+.contenedor-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid #2a162e;
+}
+
+.contenedor-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- PIE DE PÁGINA --- */
+.pie-pagina {
+    text-align: center;
+    padding: 30px;
+    background-color: #0b070c;
+    border-top: 1px solid #2a162e;
+    color: #7a617c;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 80px;
+}
+
+/* --- RESPONSIVIDAD --- */
+@media (max-width: 900px) {
+    .productos-grid, .etiquetas-tags-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .bloque-mision-vision, .bloque-mision-vision.invertido {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        padding: 30px;
+    }
+    .encabezado {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
